@@ -20,7 +20,7 @@ RUN apt-get update \
 EXPOSE 27015/udp 7778/udp
 EXPOSE 32330/tcp
 
-ADD https://raw.githubusercontent.com/sk8r776/docker-ark/master/ark.sh /usr/local/bin/ark
+ADD /data/containerdata/ark1/ark.sh /usr/local/bin/ark
 
 USER ark
 VOLUME /data/containerdata/ark1
