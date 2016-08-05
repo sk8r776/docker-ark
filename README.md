@@ -1,0 +1,1 @@
+docker run -d --restart=on-failure:5 -v /data/containerdata/ark1:/data/containerdata/ark1 -p 27015:27015/udp -p 7778:7778/udp --name=ark sk8r776/ark
