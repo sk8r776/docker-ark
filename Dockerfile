@@ -14,13 +14,13 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean \
     && mkdir -p /data/containerdata/ark1/backup \
-    && useradd -d /data/ark -s /bin/bash --uid 1000 ark \
+    && useradd -d /data/containerdata/ark1/ark -s /bin/bash --uid 1000 ark \
     && chown -R ark: /data/containerdata/ark1
 
 EXPOSE 27015/udp 7778/udp
 EXPOSE 32330/tcp
 
-ADD /data/containerdata/ark1/ark.sh /usr/local/bin/ark
+ADD ark.sh /usr/local/bin/ark
 
 USER ark
 VOLUME /data/containerdata/ark1
